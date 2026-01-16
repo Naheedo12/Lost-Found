@@ -68,5 +68,5 @@ It allows users to declare lost or found objects, consult existing declarations,
 
 ## UML Diagrams
 
-- **Class Diagram:** [class-diagram.png](https://lucid.app/lucidchart/b3f8614f-da06-4edd-8f7a-6db5a90d0107/edit?viewport_loc=-222%2C-216%2C4200%2C2021%2C0_0&invitationId=inv_49992d4d-2f30-4489-b9e6-d91fc2d40adf)  
-- **Use Case Diagram:** [use-case-diagram.png](https://lucid.app/lucidchart/b3f8614f-da06-4edd-8f7a-6db5a90d0107/edit?viewport_loc=-1141%2C-2447%2C3370%2C1621%2CiHRnoflaPjE_&invitationId=inv_49992d4d-2f30-4489-b9e6-d91fc2d40adf)  
+- **Class Diagram:** [View Class Diagram on Lucidchart](https://lucid.app/lucidchart/b3f8614f-da06-4edd-8f7a-6db5a90d0107/edit?viewport_loc=-222%2C-216%2C4200%2C2021%2C0_0&invitationId=inv_49992d4d-2f30-4489-b9e6-d91fc2d40adf)  
+- **Use Case Diagram:** [View Use Case Diagram on Lucidchart](https://lucid.app/lucidchart/b3f8614f-da06-4edd-8f7a-6db5a90d0107/edit?viewport_loc=-1141%2C-2447%2C3370%2C1621%2CiHRnoflaPjE_&invitationId=inv_49992d4d-2f30-4489-b9e6-d91fc2d40adf)  
