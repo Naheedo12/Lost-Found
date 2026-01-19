@@ -15,8 +15,6 @@ use App\Http\Requests\RegisterRequest;
 
 class AuthController extends Controller
 {
-    use HasApiTokens, HasFactory;
-
     public function register(RegisterRequest $request)
     {
         $user = User::create([
