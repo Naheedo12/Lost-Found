@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
+use App\Http\Requests\AdminUpdateItemRequest;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -84,13 +85,7 @@ class ItemController extends Controller
             return response()->json(['message' => 'Access denied'], 403);
         }
 
-        $data = [];
-
-        foreach (['title', 'description', 'type', 'location', 'date'] as $field) {
-            if ($request->filled($field)) {
-                $data[$field] = $request->$field;
-            }
-        }
+        $data = $request->only(['title', 'description', 'type', 'location', 'date']);
 
         if ($request->hasFile('image')) {
             if ($item->image) {
@@ -105,7 +100,7 @@ class ItemController extends Controller
 
         return response()->json([
             'message' => 'Item updated',
-            'item' => $item->fresh()->load('user:id,name') 
+            'item' => $item->fresh()->load('user:id,name')
         ]);
     }
 
@@ -124,15 +119,11 @@ class ItemController extends Controller
         return response()->json(['message' => 'Item deleted']);
     }
 
-    public function adminUpdate(Request $request, Item $item)
+    public function adminUpdate(AdminUpdateItemRequest $request, Item $item)
     {
-        $data = [];
-
-        foreach (['title', 'description', 'type', 'location', 'date', 'status'] as $field) {
-            if ($request->filled($field)) {
-                $data[$field] = $request->$field;
-            }
-        }
+        $data = $request->only([
+            'title', 'description', 'type', 'location', 'date', 'status'
+        ]);
 
         if ($request->hasFile('image')) {
             if ($item->image) {

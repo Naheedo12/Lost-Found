@@ -14,12 +14,12 @@ class UpdateItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'       => 'sometimes|required|string|max:255',
-            'description' => 'sometimes|required|string',
-            'type'        => 'sometimes|required|in:lost,found',
-            'location'    => 'sometimes|required|string|max:255',
-            'date'        => 'sometimes|required|date',
-            'image'       => 'nullable|image|max:2048',
+            'title'       => 'sometimes|string|max:255',
+            'description' => 'sometimes|string',
+            'type'        => 'sometimes|in:lost,found',
+            'location'    => 'sometimes|string|max:255',
+            'date'        => 'sometimes|date',
+            'image'       => 'sometimes|image|mimes:jpg,jpeg,png|max:2048',
         ];
     }
 }
