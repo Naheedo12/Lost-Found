@@ -31,7 +31,7 @@ It allows users to declare lost or found objects, consult existing declarations,
 
 ### Admin
 1. **Login / Logout**
-2. **Manage All Declarations** – CRUD for all objects (inherit all User actions)
+2. **Manage All Declarations** – CRUD for all objects
 3. **Update Any Declaration** – Modify any object
 4. **Delete Any Declaration** – Remove duplicates or incorrect objects
 5. **Manage Object Status** – Change status of any object
@@ -45,7 +45,7 @@ It allows users to declare lost or found objects, consult existing declarations,
 - **User Role**
   - CRUD on their own objects
   - View and filter objects
-  - Upload images (Cloudinary)
+  - Upload images (Storage)
 - **Admin Role**
   - Full control over all objects
   - Update or delete any declaration
