@@ -1,28 +1,28 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ItemController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/logout', [AuthController::class, 'logout']);
-    
-    Route::middleware('role:admin')->group(function () {
+Route::get('/items', [ItemController::class, 'index']);
+Route::get('/items/filter', [ItemController::class, 'filter']);
+Route::get('/items/{item}', [ItemController::class, 'show']);
 
+Route::middleware('auth:sanctum')->group(function () {
+
+    Route::post('/logout', [AuthController::class, 'logout']);
+
+    Route::get('/my-items', [ItemController::class, 'myItems']);
+    Route::post('/items', [ItemController::class, 'store']);
+    Route::post('/items/{item}', [ItemController::class, 'update']);  
+    Route::delete('/items/{item}', [ItemController::class, 'destroy']); 
+
+    Route::middleware('role:admin')->prefix('admin')->group(function () {
+
+        Route::post('/items/{item}', [ItemController::class, 'adminUpdate']);  
+        Route::delete('/items/{item}', [ItemController::class, 'adminDestroy']); 
     });
 });
