@@ -59,7 +59,6 @@ It allows users to declare lost or found objects, consult existing declarations,
 - **Backend:** Laravel, MySQL  
 - **Frontend:** React, TailwindCSS, React Router, Axios  
 - **Authentication:** Laravel Sanctum
-- **Image Upload:** Cloudinary  
 - **State Management:** useContext, useState, useEffect  
 - **Testing:** PHPUnit (backend)  
 - **Containerization:** Docker, docker-compose  
