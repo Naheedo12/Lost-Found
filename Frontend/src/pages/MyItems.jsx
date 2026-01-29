@@ -207,21 +207,18 @@ const MyItems = () => {
 
                       <div className="space-y-2 mb-4">
                         <div className="flex items-center text-sm text-gray-700">
-                          <span className="text-amber-600 mr-2">📍</span>
-                          <span className="font-medium">Location:</span>
+                          <span className="font-medium">- Location:</span>
                           <span className="ml-1">{item.location || 'Not specified'}</span>
                         </div>
                         
                         <div className="flex items-center text-sm text-gray-700">
-                          <span className="text-amber-600 mr-2">📅</span>
-                          <span className="font-medium">Date:</span>
+                          <span className="font-medium">- Date:</span>
                           <span className="ml-1">{item.date ? formatDate(item.date) : 'Not specified'}</span>
                         </div>
 
                         {item.created_at && (
                           <div className="flex items-center text-sm text-gray-500">
-                            <span className="text-amber-600 mr-2">🕒</span>
-                            <span className="font-medium">Published on:</span>
+                            <span className="font-medium">- Published on:</span>
                             <span className="ml-1">{formatDate(item.created_at)}</span>
                           </div>
                         )}
